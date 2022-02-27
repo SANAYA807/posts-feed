@@ -56,7 +56,7 @@ const Feed = () => {
                     </div>
                 </div>
 
-
+                {/* gif search ---------------------------------------------------------- */}
 
                 {toggle && <div className='card' style={{ position: 'absolute', top: '120px', right: '100px', zIndex: '100', width: '25rem', margin: 'auto', marginTop: '20px', height: '20rem', overflow: 'scroll' }}>
                     <div className="container">
@@ -74,6 +74,7 @@ const Feed = () => {
                         </div>
                     </div>
                 </div>}
+                {/* posts ----------------------------------------------------------------------- */}
                 <hr />
                 {posts.map((post, index) => <Post key={index} message={post.message} gif={post.gif} />)}
 
