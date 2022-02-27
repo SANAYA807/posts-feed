@@ -58,7 +58,7 @@ const Feed = () => {
 
                 {/* gif search ---------------------------------------------------------- */}
 
-                {toggle && <div className='card' style={{ position: 'absolute', top: '120px', right: '100px', zIndex: '100', width: '25rem', margin: 'auto', marginTop: '20px', height: '20rem', overflow: 'scroll' }}>
+                {toggle && <div className='card' style={{ position: 'absolute', top: '120px', right: '10%', zIndex: '100', width: '80%', margin: 'auto', marginTop: '20px', height: '20rem', overflow: 'scroll' }}>
                     <div className="container">
                         <div class="input-group" style={{ marginTop: '10px' }}>
                             <input type="text" class="form-control" placeholder="write something...." onChange={e => setGifSearch(e.target.value)} />
