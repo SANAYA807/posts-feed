@@ -25,7 +25,7 @@ const Feed = () => {
             }
 
         }
-    }, [gifSearch])
+    }, [gifSearch, gifs])
 
     const handleClick = (item) => {
         setgif(item)
@@ -52,7 +52,7 @@ const Feed = () => {
                             <button class="btn btn-outline-secondary" type="button" onClick={() => setToggle(!toggle)}>Add Gif</button>
                             <button class="btn btn-outline-secondary" type="button" onClick={() => handleSubmit()}>Post</button>
                         </div>
-                        {gif !== '' && <img src={gif} height='200px' />}
+                        {<img src={gif} height='200px' />}
                     </div>
                 </div>
 
