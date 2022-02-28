@@ -14,7 +14,7 @@ const Feed = () => {
             let res = await axios.get(`https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=15&offset=0&q=${gifSearch}`)
             if (res.data) {
                 setGifs(res.data.data.map(item => item.images.original.url))
-                console.log(res.data);
+
             }
 
         } else {
@@ -25,7 +25,7 @@ const Feed = () => {
             }
 
         }
-    }, [gifSearch, gifs])
+    }, [gifSearch])
 
     const handleClick = (item) => {
         setgif(item)
@@ -37,7 +37,7 @@ const Feed = () => {
         setgif('')
         setMessage('')
     }
-
+    console.log(gifs);
     return (
         <>
             <div className="container">
@@ -67,7 +67,7 @@ const Feed = () => {
                     </div>
                     <div className="card-body">
                         <div class="row text-center text-lg-start">
-                            {gifs?.map(item => <div class="col-lg-3 col-md-4 col-6">
+                            {gifs.map((item, index) => <div key={index} class="col-lg-3 col-md-4 col-6">
                                 <img class="img-fluid img-thumbnail" src={item} alt="" onClick={() => handleClick(item)} />
                             </div>)}
 
